@@ -1,0 +1,8 @@
+三层架构
+controller (控制层)
+service（服务层）
+dao(持久层)
+Application
+util：所有人都可以用的方法（工具）
+common：抽取出来(封装)的方法，供部分人使用
+
