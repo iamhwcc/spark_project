@@ -25,7 +25,7 @@ object udf {
 
 
         spark.udf.register("avgSalary", (salary: Long) => {
-            salary /
+            salary / 2
         })
 
         val sql: String = """
