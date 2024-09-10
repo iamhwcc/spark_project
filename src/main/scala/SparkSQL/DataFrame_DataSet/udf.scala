@@ -33,8 +33,10 @@ object udf {
                                |from user
                                |""".stripMargin
 
-        spark.sql(sql).show()
+        spark.sql(sql).show(false)
 
+
+        spark.close()
     }
 
 }

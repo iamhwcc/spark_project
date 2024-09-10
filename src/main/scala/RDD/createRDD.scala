@@ -9,10 +9,12 @@ object createRDD {
         val conf = new SparkConf().setMaster("local[*]").setAppName("RDD")
         val sc = new SparkContext(conf)
 
+
         val dataRDD1 = sc.makeRDD(List(("a",1),("b",2),("c",3)))
         val dataRDD2 = sc.makeRDD(List(("a",1),("b",2)))
         val rdd = dataRDD1.leftOuterJoin(dataRDD2)
         rdd.collect().foreach(println)
+
     }
 
 }

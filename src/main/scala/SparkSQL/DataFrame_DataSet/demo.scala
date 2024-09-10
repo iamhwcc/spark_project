@@ -1,7 +1,8 @@
 package SparkSQL.DataFrame_DataSet
 
+import org.apache.spark.rdd.RDD
 import org.apache.spark.{SparkConf, SparkContext}
-import org.apache.spark.sql.{DataFrame, Dataset, SparkSession}
+import org.apache.spark.sql.{DataFrame, Dataset, Row, SparkSession}
 
 object demo {
 
@@ -17,6 +18,9 @@ object demo {
         // RDD converting to Dataframe should import this
         import spark.implicits._
 
+        // RDD to Dataframe
+//        spark.sparkContext.makeRDD(List(1,2,3,4)).toDF().show()
+
         val df: DataFrame = spark.sparkContext.textFile("/Users/hwc/Documents/Spark Project/Spark_WordCount/datas/people.txt")
             .map(line => {
                 val strings: Array[String] = line.split(",")
@@ -25,14 +29,11 @@ object demo {
 
         df.createTempView("user")
 
-        val table: DataFrame = spark.sql(
-            """
-              |select *
-              |from user
-              |""".stripMargin)
+        val rdd: RDD[Int] = spark.sparkContext.makeRDD(List(1, 2, 3, 4))
+        val frame: DataFrame = rdd.toDF("a")
 
-        val map: Map[String, Any] = table.first().getValuesMap[Any](List("name", "age"))
 
-        println(map)
+
+        spark.close()
     }
 }

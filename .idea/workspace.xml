@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e017b72-514a-44cb-9b8b-59bbffcde408" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datas/people.txt" afterDir="false" />
+    <list default="true" id="8e017b72-514a-44cb-9b8b-59bbffcde408" name="更改" comment="spark implicit">
+      <change afterPath="$PROJECT_DIR$/src/main/scala/SparkSQL/DataFrame_DataSet/type_safe_udaf.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/RDD/createRDD.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/RDD/createRDD.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/SparkSQL/DataFrame_DataSet/demo.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/SparkSQL/DataFrame_DataSet/demo.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/SparkSQL/DataFrame_DataSet/udaf.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/SparkSQL/DataFrame_DataSet/udaf.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/SparkSQL/DataFrame_DataSet/udf.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/SparkSQL/DataFrame_DataSet/udf.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,10 +70,13 @@
     "project.structure.side.proportion": "0.25287357",
     "settings.editor.selected.configurable": "advanced.settings",
     "vue.rearranger.settings.migration": "true",
-    "应用程序.demo.executor": "Run"
+    "应用程序.demo.executor": "Run",
+    "应用程序.type_safe_udaf.executor": "Run",
+    "应用程序.udaf.executor": "Run",
+    "应用程序.udf.executor": "Run"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="应用程序.type_safe_udaf">
     <configuration name="demo" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="SparkSQL.DataFrame_DataSet.demo" />
       <module name="Spark_WordCount" />
@@ -91,8 +90,50 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="type_safe_udaf" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="SparkSQL.DataFrame_DataSet.type_safe_udaf" />
+      <module name="Spark_WordCount" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="SparkSQL.DataFrame_DataSet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="udaf" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="SparkSQL.DataFrame_DataSet.udaf" />
+      <module name="Spark_WordCount" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="SparkSQL.DataFrame_DataSet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="udf" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="SparkSQL.DataFrame_DataSet.udf" />
+      <module name="Spark_WordCount" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="SparkSQL.DataFrame_DataSet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="应用程序.type_safe_udaf" />
+        <item itemvalue="应用程序.udaf" />
+        <item itemvalue="应用程序.udf" />
         <item itemvalue="应用程序.demo" />
       </list>
     </recent_temporary>
@@ -115,11 +156,26 @@
       <updated>1725701864008</updated>
       <workItem from="1725701865532" duration="99000" />
       <workItem from="1725846907012" duration="220000" />
-      <workItem from="1725847134839" duration="6999000" />
+      <workItem from="1725847134839" duration="8449000" />
+      <workItem from="1725896294553" duration="210000" />
+      <workItem from="1725932220330" duration="10629000" />
     </task>
+    <task id="LOCAL-00001" summary="spark implicit">
+      <option name="closed" value="true" />
+      <created>1725876668656</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1725876668656</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="spark implicit" />
+    <option name="LAST_COMMIT_MESSAGE" value="spark implicit" />
   </component>
 </project>
