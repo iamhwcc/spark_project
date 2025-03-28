@@ -9,7 +9,7 @@ object from_mysql {
         val spark: SparkSession = SparkSession.builder()
             .master("local[*]")
             .appName("test_dataframe_dataset")
-            .config("spark.driver.host","localhost")
+            .config("spark.driver.host", "localhost")
             .getOrCreate()
         val properties = new Properties()
         properties.put("user", "root")
@@ -18,11 +18,12 @@ object from_mysql {
 
         val df: DataFrame = spark.read.jdbc("jdbc:mysql://localhost:3306/leetcode", "tb_order_detail", properties)
         df.createTempView("tb_order_detail")
-        val sql: String = """
-                               |select product_id, sum(price)
-                               |from tb_order_detail
-                               |group by product_id
-                               |""".stripMargin
+        val sql: String =
+            """
+              |select product_id, sum(price)
+              |from tb_order_detail
+              |group by product_id
+              |""".stripMargin
         spark.sql(sql).show()
     }
 }
